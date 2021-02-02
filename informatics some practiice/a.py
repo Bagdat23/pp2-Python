@@ -1,14 +1,17 @@
 aa={}
+bb={}
+cc={}
 a=int(input())
-max_sum=0
+sum_max=0
 for x in range(a):
-    sname= str(input())
-    y,u,i=map(int,input().split())
-    aa[x]=y+u+i
-    aa[sname]=x
-    if aa[x]>max_sum:
-        max_sum=aa[x]
-        aa[sname]=aa[x]
+    sname,fname,t,y,u=map(str,input().split())
+    sname=sname+" "+fname
+    bb[x]=int(t)+int(y)+int(u)
+    cc[x]=int(t)+int(y)+int(u)
+    aa[sname]=int(t)+int(y)+int(u)
+    if bb[x] > sum_max:
+        sum_max = bb[x]
+    print(sorted(cc[x]))
 for x in aa:
-    if aa[x]==aa[sname]:
+    if aa[x] > sum_max-1:
         print(x)
