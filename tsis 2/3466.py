@@ -1,0 +1,5 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+print((a*2+b*2)*(d-1)+c*2+a)
