@@ -1,15 +1,13 @@
-import csv
-import re
-import math,os
-title = ['adam', 'erzhan', 'zhandos']
-count = [13, 14, 54]
-unit = [1, 2, 3]
-total = [123, 145, 121]
+import csv,os,re
+a = ['kana','baga','dias']
+b = [1,2,3]
+c = [11,12,13]
+d = [123,124,125]
 with open('gg.csv','w',newline='') as ans:
-    a = ['Title', 'Count', 'Unit price', 'Total price']
-    writer = csv.DictWriter(ans,fieldnames=a)
-    writer.writeheader()
-    for i in range(len(title)):
+    a = ['Title','Count','Unit price','Total price']
+    aa = csv.DictWriter(ans,fieldnames=a)
+    aa.writeheader()
+    for i in range(len(a)):
         writer.writerow({'Title': f'{title[i]}', 'Count': f'{count[i]}', 'Unit price': f'{unit[i]}', 'Total price': f'{total[i]}'})
 
 
